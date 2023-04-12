@@ -61,11 +61,22 @@ Regr
 plot(Y,X,main="X data vs. Y data",xlab="Y data",ylab="X data",col="red")
 abline(lm(X~Y))
 
+#MUltiple Regression
+#Problem 1
+#Input the variables
+Y = c(110,80,70,120,150,90,70,120)
+Y
+X1 = c(30,40,20,50,60,40,20,60)
+X1
+X2= c(11,10,7,15,19,12,8,14)
+X2
+   
+#linear regression model for Y on X1and X2
+Reg_Model = lm(Y~X1+X2)
+Reg_Model
 
-
-
-
-
-
-
-
+#install.packages("scatterplot3d")
+library(scatterplot3d)
+#plot the data set
+graph = scatterplot3d(X1,X2,Y)
+graph$plane3d(Reg_Model)
