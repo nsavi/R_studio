@@ -68,6 +68,8 @@ zalpha
 #Step5:Conclusion
 if(abs(z)<zalpha){print("H0 is accepted at 5% LoS")}else{print("H0 is rejected at 5% LoS")}
 
+#Solution3:
+
 alpha=0.05 #5% LoS
 zalpha=qnorm(1-alpha)
 zalpha
