@@ -1,0 +1,9 @@
+
+#Problem2:
+mean=4300
+sd=750
+
+x=seq(2000,7050,length=150)
+y=dnorm(x,mean=4300,sd=750)
+data.frame(x,y)
+plot(x,y,type="l")
