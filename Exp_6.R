@@ -67,3 +67,32 @@ zalpha
 
 #Step5:Conclusion
 if(abs(z)<zalpha){print("H0 is accepted at 5% LoS")}else{print("H0 is rejected at 5% LoS")}
+
+alpha=0.05 #5% LoS
+zalpha=qnorm(1-alpha)
+zalpha
+#alpha can be any number
+
+n=640
+pdash=63/640
+p=0.1726
+q=1-p
+
+#Step1:
+#H0:pdash>=p
+#H1:pdash<p(One tailed test)
+
+#Step2:
+alpha=0.05 #los
+
+#Step3:
+z=(pdash-p)/sqrt((p*q/n))
+abs(z)
+
+#Step4:
+#Critical Values for One tailed test
+zalpha=qnorm(1-alpha)
+zalpha
+
+#Step5:Conclusion
+if(abs(z)<zalpha){print("H0 is accepted at 5% LoS")}else{print("H0 is rejected at 5% LoS")}
