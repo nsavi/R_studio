@@ -84,4 +84,28 @@ Falpha = qf((1-alpha),n2-1,n1-1)
 Falpha
 
 if(F<Falpha){print("H0 accepted at 5% los")}else{print("H0 is rejected at 5% los")}
+-------------------------------------------------------------------------------------
+
+#Problem 1 on t test
+# A machinist is expected to make engine parts with axle diameter of 1.75cm.
+# A random sample of 10 parts shows a mean diameter 1.85cm with a S.D. of 0.1cm.
+#On the basis of this sample , would you say that work of the machinist is inferior?
+#H0: xbar = mu
+#h1: xbar not = mu (Two Tailed Test)
+n=10 #size of the sample
+xbar = 1.85 # Sample's Mean
+sd = 0.1 # Sample's SD
+mu = 1.75 # Population
+
+alpha = 0.05  #assume
+t=(xbar - mu)/(sd/sqrt(n))
+abs(t)
+
+#Critical value for two tailed test
+talpha = qt(1-alpha/2,n-1)
+talpha
+
+if(abs(t)<talpha){print("H0 accepted at 5% los")}else{print("H0 is rejected at 5% los")}
+------------------------------------------------------------------------------------------
+
 
